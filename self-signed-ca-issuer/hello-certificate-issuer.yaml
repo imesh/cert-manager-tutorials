@@ -1,0 +1,7 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: hello-certificate-issuer
+spec:
+  ca:
+    secretName: hello-ca-certificate-key-pair

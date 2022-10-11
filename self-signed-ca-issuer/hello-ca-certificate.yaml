@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+ name: hello-ca-certificate
+spec:
+ secretName: hello-ca-certificate-key-pair
+ isCA: true
+ issuerRef:
+   name: hello-ca-issuer
+   kind: Issuer
+ commonName: "hello.certificate.authority"
+ dnsNames:
+ - hello.certificate.authority
